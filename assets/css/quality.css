@@ -1,0 +1,177 @@
+/* General Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 13px; /* Reduced font size */
+    margin: 20px 0;
+}
+
+/* Table Header */
+table th {
+    background-color: #007bff; /* Blue header */
+    color: white;
+    padding: 8px; /* Reduced padding */
+    text-align: center;
+    border: 1px solid #ddd;
+    white-space: nowrap; /* Prevents wrapping */
+}
+
+/* Table Data Cells */
+table td {
+    border: 1px solid #ddd;
+    padding: 5px; /* Compact padding */
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap; /* Prevents wrapping for better visibility */
+}
+
+/* Inputs inside Table */
+table td input, table td select {
+    width: 85%; /* Adjust input width */
+    padding: 3px; /* Compact padding */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 12px; /* Smaller font */
+    text-align: center; /* Center-align text */
+}
+
+/* Action Buttons */
+table td .delete-btn {
+    background-color: #dc3545; /* Red delete button */
+    color: white;
+    border: none;
+    padding: 3px 7px; /* Reduced padding for smaller size */
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+table td .delete-btn:hover {
+    background-color: #b02a37;
+}
+
+/* Add Measurement Button */
+.add-measurement-btn {
+    display: block;
+    width: 100%;
+    background-color: #28a745; /* Green button */
+    color: white;
+    border: none;
+    padding: 8px 0; /* Compact height */
+    font-size: 14px; /* Smaller font */
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.add-measurement-btn:hover {
+    background-color: #218838;
+}
+
+/* Responsive Table for Smaller Screens */
+@media screen and (max-width: 768px) {
+    table th, table td {
+        font-size: 12px; /* Reduce font size for smaller screens */
+        padding: 5px;
+    }
+
+    table td input, table td select {
+        width: 100%; /* Full width for mobile view */
+        font-size: 12px;
+    }
+}
+/* General Styling for Headings */
+h1, h2, h3 {
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+
+/* Main Heading (e.g., Part Inspection Form) */
+h1 {
+    font-size: 24px;
+    color: #007bff; /* Blue color */
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 2px solid #007bff; /* Underline effect */
+    padding-bottom: 10px;
+    margin-top: 20px;
+}
+
+/* Subheadings (e.g., Inspection Information, Measurement Details) */
+h3 {
+    font-size: 18px;
+    color: #333; /* Dark gray */
+    font-weight: bold;
+    border-left: 5px solid #007bff; /* Blue border on the left */
+    padding-left: 10px;
+    margin-top: 20px;
+}
+
+/* Additional Styling for Section Dividers */
+.section {
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #f8f9fa; /* Light gray background */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+/* Add Measurement Button */
+.add-measurement-btn {
+    display: block;
+    width: 100%; /* Full-width */
+    max-width: 250px; /* Optional: Limit button width */
+    margin: 20px auto; /* Center horizontally */
+    background-color: #28a745; /* Green background */
+    color: white; /* White text */
+    border: none;
+    padding: 12px 20px; /* Padding for better size */
+    font-size: 16px; /* Larger font size */
+    font-weight: bold; /* Bold text */
+    text-align: center;
+    text-transform: uppercase; /* Capitalize text */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+.add-measurement-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: translateY(-2px); /* Lift effect */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Slightly deeper shadow */
+}
+
+/* Submit Button */
+.submit-btn {
+    display: inline-block;
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    border: none;
+    padding: 12px 20px; /* Padding for size */
+    font-size: 16px; /* Larger font size */
+    font-weight: bold; /* Bold text */
+    text-align: center;
+    text-transform: uppercase; /* Capitalize text */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+.submit-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Lift effect */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Slightly deeper shadow */
+}
+
+/* Responsive Buttons for Smaller Screens */
+@media screen and (max-width: 768px) {
+    .add-measurement-btn, .submit-btn {
+        width: 90%; /* Full width for smaller screens */
+        font-size: 14px; /* Adjust font size */
+    }
+}

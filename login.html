@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="login">
+        <form id="loginForm" class="container">
+            <div class="logo-container">
+                <img src="assets/images/logo1.png" alt="Company Logo" class="login__logo">
+            </div>
+
+            <div class="login__content">
+                <div class="login__box">
+                    <i class="ri-user-3-line login__icon"></i>
+                    <div class="login__box-input">
+                        <input type="text" required class="login__input" id="userId" name="userId" placeholder=" ">
+                        <label for="userId" class="login__label">User ID</label>
+                    </div>
+                </div>
+
+                <div class="login__box">
+                    <i class="ri-lock-2-line login__icon"></i>
+                    <div class="login__box-input">
+                        <input type="password" required class="login__input" id="password" name="password" placeholder=" ">
+                        <label for="password" class="login__label">Password</label>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="login__button">Login</button>
+        </form>
+        <p>Don't have an account? <a href="index.html">Sign up</a></p>
+    </div>
+
+    <script src="assets/js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "signup-page",
+  "version": "1.0.0",
+  "description": "Sign up page with role-based user management",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.21.1",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^2.3.3",
+    "xlsx": "^0.18.5"
+  }
+}

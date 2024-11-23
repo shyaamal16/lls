@@ -1,0 +1,133 @@
+/* General body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(270deg, #00bcd4, #004080);
+    background-size: 400% 400%;
+    animation: backgroundAnimation 60s ease infinite;
+    color: #333;
+}
+
+/* Animated background */
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Main container styling */
+.container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Logo styling */
+.logo-container img {
+    width: 80px;
+    margin-bottom: 1rem;
+}
+
+/* Headings */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #004080;
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+/* Labels */
+label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: #004080;
+}
+
+/* Inputs and select dropdown */
+input, select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #004080;
+    box-shadow: 0 0 5px rgba(0, 64, 128, 0.5);
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #004080;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #003060;
+    transform: translateY(-3px);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+/* Sign-in link */
+p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+p a {
+    color: #004080;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+p a:hover {
+    color: #00bcd4;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

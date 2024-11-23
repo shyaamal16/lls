@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+
+<body>
+    <!-- Sidebar Section -->+
+    <div class="sidebar">
+        <h1 class="logo">Dashboard</h1>
+        
+        <!-- Create Button -->
+        <button class="create-button" id="createButton">
+            <i class="fas fa-plus"></i> Create
+        </button>
+        
+        <!-- Sidebar Navigation -->
+        <ul>
+            <li onclick="navigateTo('quality-plan')"><i class="fas fa-tasks"></i> Quality Plan</li>
+            <li onclick="navigateTo('inspection-report')"><i class="fas fa-file-alt"></i> Inspection Report</li>
+            <li id="signupOption" onclick="navigateTo('signup')" style="display: none;"><i class="fas fa-user-plus"></i> Sign Up</li>
+        </ul>
+
+        <!-- Logout Button -->
+        <button id="logoutButton" class="logout-button">
+            <i class="fas fa-sign-out-alt"></i> Logout
+        </button>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content">
+        <!-- Right-Aligned Filter Section -->
+        <div class="header">
+            <h2 id="page-title">Welcome to the Dashboard</h2>
+            <div class="filter-section">
+                <div class="filter-controls">
+                    <div class="filter-group">
+                        <label for="part_number">Part Number:</label>
+                        <input type="text" id="part_number" placeholder="Enter Part Number">
+                    </div>
+                    <div class="filter-group">
+                        <label for="from_date">From Date:</label>
+                        <input type="date" id="from_date">
+                    </div>
+                    <div class="filter-group">
+                        <label for="to_date">To Date:</label>
+                        <input type="date" id="to_date">
+                    </div>
+                    <button class="filter-button" onclick="filterData()">Filter</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Existing Content -->
+        <div id="existing-content">
+            <p id="page-description">Choose an option from the sidebar to get started.</p>
+
+            <!-- Table for Displaying Filtered Data -->
+            <div id="data-display">
+                <table id="data_table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Part Number</th>
+                            <th>Inspection Details</th>
+                            <th>Result</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table_body">
+                        <!-- Data will be dynamically inserted here -->
+                    </tbody>
+                </table>
+
+                <!-- Download Button for Filtered Data -->
+                <button class="download-button" onclick="downloadData()">Download Filtered Data</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Create Options Popup -->
+    <div id="createPopup" class="popup">
+        <div class="popup-content">
+            <h3>Create</h3>
+            <button onclick="navigateTo('create-quality-plan')">Quality Plan</button>
+            <button onclick="navigateTo('create-inspection-report')">Inspection Report</button>
+            <button class="close-popup" onclick="closePopup()">Close</button>
+        </div>
+    </div>
+
+    <script src="assets/js/dashboard.js"></script>
+</body>
+
+</html>

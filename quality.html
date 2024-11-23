@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part Details</title>
+    <link rel="stylesheet" href="assets/css/quality.css">
+</head>
+<body>
+    <h1>Part Inspection Form</h1>
+
+    <!-- Part Information Section -->
+    <section id="part-info">
+        <h2>Part Information</h2>
+        <table id="mainTable">
+            <tr>
+                <th>Part Number</th>
+                <th>Part Name</th>
+                <th>Material Spec</th>
+                <th>Date</th>
+                <th>Time</th>
+            </tr>
+            <tr>
+                <td><input type="text" name="partNumber" placeholder="Enter part number" required></td>
+                <td><input type="text" name="partName" placeholder="Enter part name" required></td>
+                <td><input type="text" name="materialSpec" placeholder="Enter material specification" required></td>
+                <td><input type="text" id="currentDate" readonly></td>
+                <td><input type="text" id="currentTime" readonly></td>
+            </tr>
+        </table>
+    </section>
+        <!-- Part Information Section -->
+        <section id="part-info">
+            <h2></h2>
+            <table id="mainTable">
+                <tr>
+                    <th>Inspected By</th>
+                    <th>Verified By</th>
+                    <th>Accepted / Rejected</th>
+                <tr>
+                    <td><input type="text" placeholder="Enter Inspected" required></td>
+                    <td><input type="text" name="Verified By" placeholder="verified" required></td>
+                    <td>
+                        <select name="status" required>
+                            <option value="" disabled selected>Select status</option>
+                            <option value="Accepted">Accepted</option>
+                            <option value="Rejected">Rejected</option>
+                        </select>
+                    </td>
+            </table>
+        </section>
+
+    
+
+    <!-- Measurement Details Section -->
+    <section id="measurement-details">
+        <h2>Measurement Details</h2>
+        <table id="subTable">
+            <thead>
+                <tr>
+                    <th>Sl No</th>
+                    <th>Nominal Value</th>
+                    <th>Tol +</th>
+                    <th>Tol -</th>
+                    <th>USL</th>
+                    <th>LSL</th>
+                    <th>Instrument Used</th>
+                    <th>CTC/CTQ</th>
+                    <th>Remarks</th>
+                    <th>Action</th> <!-- New Column for Delete Button -->
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Initial Row -->
+                <tr>
+                    <td><input type="number" name="slNo1" value="1" readonly></td>
+                    <td><input type="text" name="nominalValue1" placeholder="Enter nominal value" required></td>
+                    <td><input type="text" name="tolPlus1" placeholder="Enter Tol +"></td>
+                    <td><input type="text" name="tolMinus1" placeholder="Enter Tol -"></td>
+                    <td><input type="text" name="usl1" placeholder="Enter USL"></td>
+                    <td><input type="text" name="lsl1" placeholder="Enter LSL"></td>
+                    <td><input type="text" name="instrumentUsed1" placeholder="Enter instrument used"></td>
+                    <td><input type="text" name="ctcCtq1" placeholder="Enter CTC/CTQ"></td>
+                    <td><input type="text" name="remarks1" placeholder="Enter remarks"></td>
+                    <td><button class="deleteBtn">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <button id="addRowBtn">Add Row</button>
+    </section>
+
+    <!-- Submit Button -->
+    <section id="submit-section">
+        <button id="submitBtn">Submit</button>
+    </section>
+
+  
+
+    <!-- Link to JavaScript -->
+    <script src="assets/js/quality.js"></script>
+</body>
+</html>
